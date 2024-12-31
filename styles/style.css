@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+	font-family: "Inter";
+	src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
 :root {
@@ -16,8 +16,6 @@
 	--font-weight-medium: 600;
 	--font-weight-heavy: 700;
 }
-
-
 
 * {
 	margin: 0;
@@ -58,12 +56,37 @@ p,
 	border-radius: 50%;	
 	width: 30%;
 	margin-bottom: 2rem;
-	transition: transform 3s ease;
+	transition: transform 3s ease, box-shadow 2s ease;
 }
 
 .card__image:hover {
 	cursor: pointer;
 	transform: rotate(360deg);
+	box-shadow: 0 0 50px 0 white;
+}
+
+@keyframes radiate {
+	0%,100% {
+		box-shadow: 0 0 0px 0 black;
+	}
+	25%,75% {
+		box-shadow: 0 0 25px 0 white;
+	}
+	50% {
+		box-shadow: 0 0 50px 0 white;
+	}
+}
+
+
+.card__image--animate {
+	/* animation-name: radiate;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none; */
+	animation: radiate 2.5s linear;
 }
 
 .card__name {	
