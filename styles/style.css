@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+:root {
+	--clr-green: hsl(75, 94%, 57%);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-grey700: hsl(0, 0%, 20%);
+	--clr-grey800: hsl(0, 0%, 12%);
+	--clr-grey900: hsl(0, 0%, 8%);
+
+	--paragraph-sm: 14px;
+
+	--font-weight-light: 400;
+	--font-weight-medium: 600;
+	--font-weight-heavy: 700;
+}
+
+
+
+* {
+	margin: 0;
+	/* line-height: calc(1em+0.5rem); */
+}
+
+body {
+	/* border:blue 5px solid; */
+	height: 100vh;
+	font-family: "Inter", sans-serif;
+	color: var(--clr-stone600);
+
+	background-color: var(--clr-grey900);
+}
+
+.container {
+	display: grid;
+	place-items: center; /*cause children item which is container box in this case to be centered veritcally and horizontally*/
+	grid-template-rows: 1fr auto; /* Main content takes up space, and attribution is placed at the bottom */
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+}
+
+p,
+.card__link-item {
+	font-size: var(--paragraph-sm);
+}
+
+.card {
+	/* outline:1px solid red;  */
+	/* box-sizing: border-box;
+max-width:365px; */
+	display: grid;
+	place-items: center; /*causing the elemetns in the box centered veritcally and horizontally.*/
+	padding: 2rem 3rem; /*expanding the card width and height through this padding, this can still be considered content box (not border box because there is no height and width size specified for this card. Border box will only work if the element height and width size are specified.*/
+	border-radius: 15px;
+	background-color: var(--clr-grey800);
+	margin-bottom: 2rem; /* Add space at the bottom of the card */
+}
+
+.card__image {
+	border-radius: 50%;
+	/* border:1px solid blue;	 */
+	width: 30%;
+	/* margin-top:1rem; */
+	margin-bottom: 2rem;
+	transition: transform 3s ease;
+}
+
+.card__image:hover {
+	cursor: pointer;
+	transform: rotate(360deg);
+}
+
+.card__name {
+	/* outline:1px solid red; */
+	font-weight: var(--font-weight-medium);
+	font-size: 1.5rem;
+	margin-bottom: 0.8rem;
+	color: var(--clr-white);
+}
+
+.card__location {
+	/* outline:1px solid red; */
+	font-weight: var(--font-weight-heavy);
+	color: var(--clr-green);
+	margin-bottom: 0.8rem;
+}
+
+.card__about {
+	/* outline:1px solid red; */
+	font-weight: var(--font-weight-light);
+	color: var(--clr-white);
+	padding: 1rem;
+	text-align: center;
+}
+
+.card__link {
+	/* outline:1px solid blue; */
+	width: 100%;
+	margin-top: 0.5rem;
+	/* margin-bottom: 1rem; */
+}
+
+.card__link-item {
+	display: block;
+	text-decoration: none;
+	/* outline:1px solid red; */
+	color: var(--clr-white);
+	text-align: center;
+	padding: 0.8rem;
+	border-radius: 7px;
+	background-color: var(--clr-grey700);
+	font-weight: var(--font-weight-heavy);
+
+	transition: background-color 0.8s ease, color 0.5s ease, transform 0.3s ease;
+}
+
+.card__link-item:not(:last-child) {
+	margin-bottom: 0.8rem;
+}
+
+.card__link-item:hover {
+	cursor: pointer;
+	background-color: var(--clr-green);
+	color: var(--clr-grey900);
+	font-size: 15px;
+	transform: scale(1.05);
+}
+
+.attribution .attribution__link {
+	color: var(--clr-green);
+}
+
+/*md*/
+@media (min-width: 375px) {
+}
+
+@media (min-width: 1440px) {
+}
