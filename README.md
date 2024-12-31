@@ -29,8 +29,8 @@ Mobile:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/social-links-profile-with-little-animations-0WwPfoTYBx)
-- Live Site URL: [Add live site URL here](https://social-links-profile-raysh4n.netlify.app/)
+- Solution URL: [click here](https://www.frontendmentor.io/solutions/social-links-profile-with-little-animations-0WwPfoTYBx)
+- Live Site URL: [click here](https://social-links-profile-raysh4n.netlify.app/)
 
 ## My process
 
