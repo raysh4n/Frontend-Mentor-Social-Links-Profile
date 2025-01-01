@@ -9,7 +9,6 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
   - [Links](#links)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 
 
 
@@ -33,7 +32,7 @@ Mobile:
 - Live Site URL: [click here](https://social-links-profile-raysh4n.netlify.app/)
 
 ## My process
-
+Created a container which has card div and attribution div. The container is set to grid and `place-items:center` to the child elements to be horizontally and vertically centered. The attribution is being kept to the bottom by using `grid-template-rows: 1fr auto;` at the container. 
 
 ### Built with
 
@@ -46,13 +45,9 @@ Mobile:
 
 ### What I learned
 
-
 - `box-sizing: border-box;` works only when the element size is specified in a fixed size via width/height. That's why padding code below can increase the height and width of the card since no fixed size mentioned for the width/height. 
-
-
-From ChatGPT: 
-box-sizing: border-box; ensures the padding and border are included within the defined width and height, ==but if you don't set a fixed width or height, the padding will still cause the card to expand beyond what you might expect.== You can control this behavior by either specifying a fixed size for the .card or adjusting the layout to account for the padding.
-
+- From ChatGPT: 
+box-sizing: border-box; ensures the padding and border are included within the defined width and height, but if you don't set a fixed width or height, the padding will still cause the card to expand beyond what you might expect. You can control this behavior by either specifying a fixed size for the .card or adjusting the layout to account for the padding.
 
 ```css
 .card {
@@ -61,10 +56,23 @@ box-sizing: border-box; ensures the padding and border are included within the d
     padding: 2rem 3rem;  /*this one*/
 ```
 
+<br/><br/><br/>
 
-### Continued development
-Currently there is no media queries implemented.  
-Perhaps make the card bigger for desktop version. 
+ - `text-align:center` will allow the child elements which are inline, inline block, or inline-table elements to be centered. However, won't affect block elements (block element doesn't respond to text-align).
+- Normally, good practice is to use code like below, but in this case, no need to use it. 
+
+```css
+ img,
+picture,
+video,
+canvas,
+svg {
+    display:block;
+    user-select: none;
+    max-width: 100%;
+} 
+```
+
 
 
 
